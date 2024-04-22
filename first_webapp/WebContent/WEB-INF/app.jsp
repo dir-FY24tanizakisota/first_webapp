@@ -5,9 +5,19 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>アプリケーションスコープのテスト</title>
+        <title><c:out value="${param.title}" /> | サンプルサイト</title>
     </head>
     <body>
-        <h1><c:out value="${applicationScope.app_name}" /></h1>
+        <header>
+            <h1><c:out value="${param.title}" /></h1>
+        </header>
+
+        <div id="main">
+            ${param.content}
+        </div>
+
+        <footer>
+            (c) Taro Kirameki
+        </footer>
     </body>
 </html>
